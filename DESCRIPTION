@@ -10,7 +10,6 @@ Authors@R:
     person(given = "Aymeric",
            family = "Stamm",
            role = "ctb",
-           comment = c(ORCID = "0000-0002-4035-0289"))
 Description: Implement classical hypothesis tests like t-test and the var-test and a combination 
             of the t-test and the var-test enabling the simulataneous tests on the means and the variances
             of two samples by using permutations via the use of the plausibility function.
