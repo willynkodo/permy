@@ -4,14 +4,14 @@
 \alias{tf_test}
 \title{computation of a t-test and a var-test simultaneously using permutations}
 \usage{
-tf_test(x, y, mu, sigma, perms)
+tf_test(x, y, mu, sigma, n_perms)
 }
 \arguments{
 \item{x}{a sample of length nx following a specific distribution}
 
 \item{y}{a sample of length ny following a specific distribution}
 
-\item{perms}{the number of permutations}
+\item{n_perms}{the number of permutations}
 }
 \value{
 the pvalue, the test's statistic and the distribution
