@@ -1,0 +1,20 @@
+Package: permut
+Title: hypothesis tests via permutation theory
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Wilfrid",
+           family = "Nkodo",
+           role = c("aut", "cre"),
+           email = "willnkodo@gmail.com",
+           comment = c(ORCID = "0000-0001-8049-7069")),
+    person(given = "Aymeric",
+           family = "Stamm",
+           role = "ctb",
+           comment = c(ORCID = "0000-0002-4035-0289"))
+Description: Implement classical hypothesis tests like t-test and the var-test and a combination 
+            of the t-test and the var-test enabling the simulataneous tests on the means and the variances
+            of two samples by using permutations via the use of the plausibility function.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
