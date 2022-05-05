@@ -1,4 +1,4 @@
-#' computation of a var-test using permutations
+#' Compute a var-test using permutations
 #'
 #' @param x a sample of length nx following a specific distribution
 #' @param y a sample of length ny following a specific distribution
