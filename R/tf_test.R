@@ -4,13 +4,13 @@
 #' @param y a sample of length ny following a specific distribution
 #' @param mu
 #' @param sigma
-#' @param perms the number of permutations
+#' @param n_perms the number of permutations
 #'
 #' @return the pvalue, the test's statistic and the distribution
 #' @export
 #'
 #' @examples tf_test(x,y,mu=0, sigma=1,10000)
-tf_test <-function(x,y,mu,sigma,perms){
+tf_test <-function(x,y,mu,sigma,n_perms){
 
   null_spec <- function(y, parameters) {
     purrr::map(y, ~ (.x - parameters[1])/parameters[2])
@@ -24,7 +24,7 @@ tf_test <-function(x,y,mu,sigma,perms){
     x, y,
     seed=1234
   )
-  pf$set_nperms(perms)
+  pf$set_nperms(n_perms)
   resultat=pf$get_value(c(mu,sigma),keep_null_distribution=TRUE)
   return (resultat)
 }
