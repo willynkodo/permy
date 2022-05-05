@@ -2,25 +2,31 @@
 % Please edit documentation in R/t_test.R
 \name{t_test}
 \alias{t_test}
-\title{Compute of a t-test using permutations}
+\title{Compute a t-test using permutations}
 \usage{
-t_test(x, y, mu, var_equal, n_perms)
+t_test(x, y, alter, mu, var_equal, conf_level, n_perms)
 }
 \arguments{
-\item{x}{a sample of length nx following a specific distribution}
+\item{x}{a sample of length nx following a specific distribution.}
 
-\item{y}{a sample of length ny following a specific distribution}
+\item{y}{a sample of length ny following a specific distribution.}
+
+\item{alter}{a string character, the type of test computed either "right_tail", "left_tail" or two_tail".}
+
+\item{mu}{a number indicating the difference in means for a two-sample t.test.}
 
 \item{var_equal}{a logical scalar, are we considering the variances to be equal or not ?}
 
-\item{n_perms}{the number of permutations}
+\item{conf_level}{the confidence level of the interval.}
+
+\item{n_perms}{the number of permutations.}
 }
 \value{
-the pvalue, the test's statistic and the distribution
+the test's statistic, its p-value, the degrees of freedom, the estimated difference in means, the alternative hypothesis, the method performed, the names of the data
 }
 \description{
-Compute of a t-test using permutations
+Compute a t-test using permutations
 }
 \examples{
-t_test(x,y,mu=0,var_equal=TRUE,10000)
+t_test(x,y,alter="two_tail",mu=0,var_equal=TRUE,conf_level=0.95,n_perms=10000)
 }

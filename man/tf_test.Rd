@@ -2,23 +2,31 @@
 % Please edit documentation in R/tf_test.R
 \name{tf_test}
 \alias{tf_test}
-\title{computation of a t-test and a var-test simultaneously using permutations}
+\title{Compute a t.test and a var.test simultaneously using permutations}
 \usage{
-tf_test(x, y, mu, sigma, n_perms)
+tf_test(x, y, alter, mu, sigma, conf_level, n_perms)
 }
 \arguments{
-\item{x}{a sample of length nx following a specific distribution}
+\item{x}{a sample of length nx following a specific distribution.}
 
-\item{y}{a sample of length ny following a specific distribution}
+\item{y}{a sample of length ny following a specific distribution.}
 
-\item{n_perms}{the number of permutations}
+\item{alter}{the type of test computed either "right_tail", "left_tail" or two_tail".}
+
+\item{mu}{a number indicating the difference in means for a two-sample t.test.}
+
+\item{sigma}{a number indicating the ratio between the variances for a two-sample var.test.}
+
+\item{conf_level}{the confidence level of the interval.}
+
+\item{n_perms}{the number of permutations.}
 }
 \value{
-the pvalue, the test's statistic and the distribution
+the test's statistic, its p-value,, the estimated difference in means, the estimates ration in variances, the alternative hypothesis, the method performed, the names of the data
 }
 \description{
-computation of a t-test and a var-test simultaneously using permutations
+Compute a t.test and a var.test simultaneously using permutations
 }
 \examples{
-tf_test(x,y,mu=0, sigma=1,10000)
+tf_test(x,y,alter="two_tail",mu=0,sigma=1,conf_level=0.95,n_perms=10000)
 }

@@ -2,23 +2,29 @@
 % Please edit documentation in R/var_test.R
 \name{var_test}
 \alias{var_test}
-\title{computation of a var-test using permutations}
+\title{Compute a var.test using permutations}
 \usage{
-var_test(x, y, sigma, n_perms)
+var_test(x, y, alter, sigma, conf_level, n_perms)
 }
 \arguments{
 \item{x}{a sample of length nx following a specific distribution}
 
 \item{y}{a sample of length ny following a specific distribution}
 
-\item{n_perms}{the number of permutations}
+\item{alter}{the type of test computed either "right_tail", "left_tail" or two_tail".}
+
+\item{sigma}{a number indicating the ratio between the variances for a two-sample var.test.}
+
+\item{conf_level}{the confidence level of the interval.}
+
+\item{n_perms}{the number of permutations.}
 }
 \value{
-the pvalue, the test's statistic and the distribution
+the test's statistic, its p-value, the degrees of freedom of the samples, the estimated ratio in variances, the alternative hypothesis, the method performed, the names of the data
 }
 \description{
-computation of a var-test using permutations
+Compute a var.test using permutations
 }
 \examples{
-var_test(x,y,sigma=1,10000)
+var_test(x,y,alter="two_tail",sigma=1,sigma=1,conf_level=0.95,n_perms=10000)
 }
