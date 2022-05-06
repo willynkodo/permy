@@ -32,5 +32,5 @@ var_test <-function(x,y,alter,sigma,conf_level,n_perms){
   c=length(x)-1
   d=length(y)-1
   e=var(x)/var(y)
-  return (list(stat=a,pvalue=b,df_nom=c(c,d),estimate=e,alternative=alter,method="F Test/ Welsh Test to compare two variances using permutations",data_name="x and y"))
+  return (list(stat=a,pvalue=b,df_nom=c(c,d),estimate=e,alternative=alter,IC=NULL,method="F Test/ Welsh Test to compare two variances using permutations",data_name="x and y"))
 }
