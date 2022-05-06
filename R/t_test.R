@@ -33,7 +33,7 @@ t_test<-function(x,y,alter,mu,var_equal,conf_level,n_perms){
   b=pf$get_value(mu,keep_null_distribution=TRUE)$pvalue
   c=(length(x)+length(y))-2
   d=mean(y)-mean(x)
-  return (list(stat=a,pvalue=b,df=c,estimate=d,alternative=alter,method="Student Test to compare two means using permutations",data_name="x and y"))
+  return (list(stat=a,pvalue=b,df=c,estimate=d,alternative=alter,IC=NULL,method="Student Test to compare two means using permutations",data_name="x and y"))
 }
 
 
