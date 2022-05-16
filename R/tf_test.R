@@ -32,5 +32,5 @@ tf_test <-function(x,y,alter,mu,sigma,conf_level,n_perms){
   b=pf$get_value(c(mu,sigma),keep_null_distribution=TRUE)$pvalue
   c=var(x)/var(y)
   d=mean(y)-c*mean(x)
-  return (list(stat=a,pvalue=b,df_nom=c(c,d),estimate_mean=d,estimate_variance=c,alternative=alter,IC=NULL,method="T Test and  F Test to compare simulataneously two means and two variances using permutations",data_name="x and y"))
+  return (list(stat=a,pvalue=b,df=c(c,d),estimate_mean=d,estimate_variance=c,alternative=alter,IC=NULL,method="T Test and  F Test to compare simulataneously two means and two variances using permutations",data_name="x and y"))
 }
