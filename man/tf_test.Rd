@@ -22,7 +22,7 @@ tf_test(x, y, alter, mu, sigma, conf_level, n_perms)
 \item{n_perms}{the number of permutations.}
 }
 \value{
-the test's statistic, its p-value,, the estimated difference in means, the estimates ration in variances, the alternative hypothesis, the method performed, the names of the data
+the test's statistic, its p-value,, the estimated difference in means, the estimated ratio in variances, the alternative hypothesis, the method performed, the names of the data
 }
 \description{
 Compute a t.test and a var.test simultaneously using permutations
