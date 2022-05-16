@@ -27,10 +27,10 @@ var_test <-function(x,y,alter,sigma,conf_level,n_perms){
   pf$set_nperms(n_perms)
   pf$set_alternative(alter)
   pf$set_max_conf_level(conf_level)
-  a=pf$get_value(mu,keep_null_distribution=TRUE)$observed
-  b=pf$get_value(mu,keep_null_distribution=TRUE)$pvalue
+  a=pf$get_value(sigma,keep_null_distribution=TRUE)$observed
+  b=pf$get_value(sigma,keep_null_distribution=TRUE)$pvalue
   c=length(x)-1
   d=length(y)-1
   e=var(x)/var(y)
-  return (list(stat=a,pvalue=b,df_nom=c(c,d),estimate=e,alternative=alter,IC=NULL,method="F Test/ Welsh Test to compare two variances using permutations",data_name="x and y"))
+  return (list(stat=a,pvalue=b,df=c(c,d),estimate=e,alternative=alter,IC=NULL,method="F Test Test to compare two variances using permutations",data_name="x and y"))
 }
